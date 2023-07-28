@@ -1,0 +1,46 @@
+.input_group {
+    @apply flex border rounded-xl;
+    position: relative;
+}
+
+.input_text {
+    @apply w-full py-4 px-6 border rounded-xl bg-slate-50;
+    @apply focus:outline-none border-none text-zinc-950;
+}
+
+.login_button {
+    @apply w-full rounded-md;
+    @apply py-3 text-slate-50 text-lg;
+    background-color: var(--blue-color);
+}
+
+.login_button:hover {
+    background-color: var(--orange-color);
+}
+
+.button_custom {
+    @apply w-full border py-3 flex justify-center gap-2 hover:bg-gray-200 text-slate-950 rounded-md;
+}
+
+.register_link {
+    margin-left: 5px;
+    text-decoration: underline;
+    color: var(--orange-color);
+}
+
+.register_link:hover {
+    color: var(--blue-color);
+}
+
+.input_text + * {
+    color: #cbd5e1;
+}
+
+.input_text:focus + * {
+    color: var(--blue-color);
+} 
+
+.input_text:not([type=email]) ~ span:hover * {
+    cursor: pointer;
+    color: var(--blue-color);
+}
